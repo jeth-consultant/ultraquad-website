@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import {
   FaPhone,
   FaEnvelope,
@@ -6,62 +5,89 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
-import { RxCross2 } from "react-icons/rx"; // For the 'X' icon
+import Image from "next/image";
+import { footerSections } from "@/data/footerData";
 
-export default function Footer() {
+const iconMap = {
+  phone: <FaPhone />,
+  email: <FaEnvelope />,
+  github: <FaGithub />,
+  instagram: <FaInstagram />,
+  linkedin: <FaLinkedin />,
+  x: (
+    <Image
+      src="/x.png"
+      alt="X Logo"
+      width={20}
+      height={20}
+      className="object-contain"
+    />
+  ),
+};
+
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white px-6 py-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Left Section */}
-        <div>
-          <h3 className="text-xl font-bold">
-            <span className="font-serif italic">Designed</span> for companies
-          </h3>
-          <p className="mt-4 text-gray-300">
-            We are a team of passionate people whose goal is to improve
-            everyone's life through disruptive products. We build great products
-            to solve your business problems. Our products are designed for small
-            to individual, medium size companies willing to optimize their
-            performance.
-          </p>
+    <footer className="relative bg-grey from-blue-50 via-white to-blue-100 pt-20 pb-10 overflow-hidden border-t border-gray-200 shadow-inner">
+      {/* Overlay Effect (optional if using background image) */}
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {footerSections.map((section, idx) => (
+            <div key={idx}>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 tracking-wide">
+                {section.title}
+              </h3>
+
+              {typeof section.content === "string" ? (
+                <p className="text-gray-600 leading-relaxed">{section.content}</p>
+              ) : (
+                section.content.map((line, i) => (
+                  <p key={i} className="text-gray-600 leading-relaxed">
+                    {line}
+                  </p>
+                ))
+              )}
+
+              {section.icons && (
+                <div className="mt-4 space-y-2">
+                  {/* Non-social */}
+                  {section.icons
+                    .filter((icon) => icon.type !== "social")
+                    .map((icon, i) => (
+                      <p
+                        key={i}
+                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors"
+                      >
+                        {iconMap[icon.type as keyof typeof iconMap]} {icon.value}
+                      </p>
+                    ))}
+
+                  {/* Social */}
+                  <div className="flex gap-4 text-gray-700 text-xl mt-4">
+                    {section.icons
+                      .filter((icon) => icon.type === "social")
+                      .map((icon, i) => (
+                        <span
+                          key={i}
+                          className="hover:text-blue-500 transition-transform transform hover:scale-110"
+                        >
+                          {iconMap[icon.value as keyof typeof iconMap]}
+                        </span>
+                      ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        {/* Middle Section */}
-        <div>
-          <h4 className="text-lg font-semibold mb-2">Ultra Quad</h4>
-          <p className="text-gray-300">
-            250 MayFare Parklands Blvd, Westlands <br />
-            Nairobi Waiyaki way 20200 <br />
-            Kenya
-          </p>
+        <div className="border-t border-gray-300 mt-16 pt-6 text-center text-sm text-gray-500">
+          <p>&copy; {new Date().getFullYear()} Ultra Quad. All rights reserved.</p>
         </div>
-
-        {/* Right Section */}
-        <div>
-          <h4 className="text-lg font-semibold mb-2">Contact</h4>
-          <p className="flex items-center gap-2 text-gray-300">
-            <FaPhone /> +254 724-070-629
-          </p>
-          <p className="flex items-center gap-2 text-gray-300 mt-2">
-            <FaEnvelope /> hello@ultraquad.com
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-white text-xl">
-            <FaGithub />
-            <img
-              src="/x.png"
-              alt="X Logo"
-              className="w-6 h-6 object-contain "
-            />
-            <FaInstagram />
-            <FaLinkedin />
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-400">
-        <p>Copyright © Ultra Quad</p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
