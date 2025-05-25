@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import Footer from "@/components/footer/footer";
 import { FaPhone, FaEnvelope, FaLandmark } from "react-icons/fa";
 
 export default function ContactUsPage() {
