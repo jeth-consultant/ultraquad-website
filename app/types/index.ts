@@ -3,6 +3,8 @@ export interface TeamMember {
   role: string;
   expertise: string;
   description: string;
+  image?: string;
+
 }
 
 export interface Service {
