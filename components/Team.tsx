@@ -10,7 +10,7 @@ const teamMembers: TeamMember[] = [
     expertise: "Generative AI Strategy & Business Digital Transformation",
     description:
       "As our visionary CEO, Vincent guides businesses through digital transformation, leveraging AI to drive innovation and operational efficiency.",
-    image: '/team/vincent.png'
+    image: '/services/business.png'
   },
   {
     name: "Mark Mwangi",
@@ -42,9 +42,10 @@ export default function Team() {
   return (
     <section id="team" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
             Meet Our Team
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -57,7 +58,7 @@ export default function Team() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-lg flex flex-col gap-4"
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 flex flex-col gap-4"
             >
               {/* Row 1: Image + Name & Role */}
               <div className="flex items-center gap-4">
@@ -67,27 +68,33 @@ export default function Team() {
                   className="w-24 h-24 rounded-2xl object-cover"
                 />
                 <div className="flex flex-col">
-                  <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                  <p className="text-sky-600 font-medium">{member.role}</p>
+                  <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm uppercase text-sky-700 font-semibold">
+                    {member.role}
+                  </p>
                 </div>
               </div>
 
               {/* Row 2: Expertise */}
-              <p className="text-gray-700 font-medium">{member.expertise}</p>
+              <p className="text-gray-800 font-semibold">{member.expertise}</p>
 
               {/* Row 3: Description */}
-              <p className="text-gray-500 text-sm">{member.description}</p>
+              <p className="text-gray-600 text-[15px] leading-relaxed">
+                {member.description}
+              </p>
 
               {/* Row 4: Social Links */}
-              <div className="flex justify-center space-x-4 pt-2 border-t border-gray-100">
-                <a href="#" className="p-2 text-gray-400 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all duration-200">
-                  <FaLinkedin className="w-4 h-4" />
+              <div className="flex justify-center space-x-4 p-2 bg-gray-900 border-t border-gray-200 rounded-b-xl">
+                <a href="#" className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200">
+                  <FaLinkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-2 text-gray-400 hover:text-sky-400 hover:bg-sky-50 rounded-lg transition-all duration-200">
-                  <FaTwitter className="w-4 h-4" />
+                <a href="#" className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
+                  <FaTwitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-2 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-all duration-200">
-                  <FaGithub className="w-4 h-4" />
+                <a href="#" className="p-2 text-gray-400 hover:text-gray-700 transition-all duration-200">
+                  <FaGithub className="w-5 h-5" />
                 </a>
               </div>
             </div>
