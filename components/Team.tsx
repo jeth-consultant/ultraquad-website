@@ -18,7 +18,7 @@ const teamMembers: TeamMember[] = [
     expertise: "Machine Learning Architecture & Advanced Data Science",
     description:
       "Mark leads technical innovation, designing and implementing sophisticated machine learning systems that are robust, scalable, and solve complex business challenges.",
-    image: "/services/business.png"
+    image: "/team/mark.png"
   },
   {
     name: "Frank Bett",
