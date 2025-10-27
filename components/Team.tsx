@@ -10,7 +10,10 @@ const teamMembers: TeamMember[] = [
     expertise: "Generative AI Strategy & Business Digital Transformation",
     description:
       "As our visionary Chief Executive Officer, Vincent guides businesses through digital transformation, leveraging AI to drive innovation and operational efficiency.",
-    image: "/services/business.png"
+    image: "/services/business.png",
+    linkedin: "https://www.linkedin.com/in/kiplangat-vincent-824066249/",
+    twitter: "#",
+    github: "https://github.com/balvins435"
   },
   {
     name: "Mark Mwangi",
@@ -18,7 +21,10 @@ const teamMembers: TeamMember[] = [
     expertise: "Machine Learning Architecture & Advanced Data Science",
     description:
       "Mark leads technical innovation, designing and implementing sophisticated machine learning systems that are robust, scalable, and solve complex business challenges.",
-    image: "/team/mark.png"
+    image: "/team/mark.png",
+    linkedin: "https://www.linkedin.com/in/mark-mwangi-957591257/",
+    twitter: "#",
+    github: "https://github.com/Mwangimark"
   },
   {
     name: "Frank Bett",
@@ -26,7 +32,10 @@ const teamMembers: TeamMember[] = [
     expertise: "End-to-End System Development & Organizational Culture",
     description:
       "Frank combines fullstack development skills with HR management, creating solutions that are both technically excellent and human-centered.",
-    image: "/services/business.png"
+    image: "/services/business.png",
+    linkedin: "#",
+    twitter: "#",
+    github: "#"
   },
   {
     name: "Jethro",
@@ -34,7 +43,10 @@ const teamMembers: TeamMember[] = [
     expertise: "Enterprise Systems Integration & DevOps Engineering",
     description:
       "Jethro bridges business needs and technical execution, specializing in enterprise-level systems consulting and DevOps practices for seamless deployment and productivity.",
-    image: "/services/business.png"
+    image: "/services/business.png",
+    linkedin: "#",
+    twitter: "#",
+    github: "#"
   },
 ];
 
@@ -87,13 +99,13 @@ export default function Team() {
 
               {/* Row 4: Social Links */}
               <div className="flex justify-center space-x-4 p-2 bg-gray-900 border-t border-gray-200 rounded-b-xl">
-                <a href="#" className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200">
+                <a href={member.linkedin} className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200">
                   <FaLinkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
+                <a href={member.twitter} className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
                   <FaTwitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200">
+                <a href={member.github} className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200">
                   <FaGithub className="w-5 h-5" />
                 </a>
               </div>

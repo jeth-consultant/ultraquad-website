@@ -4,6 +4,9 @@ export interface TeamMember {
   expertise: string;
   description: string;
   image?: string;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
 
 }
 
