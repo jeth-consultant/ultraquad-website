@@ -10,7 +10,7 @@ const teamMembers: TeamMember[] = [
     expertise: "Generative AI Strategy & Business Digital Transformation",
     description:
       "As our visionary Chief Executive Officer, Vincent guides businesses through digital transformation, leveraging AI to drive innovation and operational efficiency.",
-    image: "/services/business.png",
+    image: "/team/vincent.JPG",
     linkedin: "https://www.linkedin.com/in/kiplangat-vincent-824066249/",
     twitter: "#",
     github: "https://github.com/balvins435"
@@ -99,13 +99,13 @@ export default function Team() {
 
               {/* Row 4: Social Links */}
               <div className="flex justify-center space-x-4 p-2 bg-gray-900 border-t border-gray-200 rounded-b-xl">
-                <a href={member.linkedin} className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200">
+                <a href={member.linkedin} target="_blank" className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200">
                   <FaLinkedin className="w-5 h-5" />
                 </a>
-                <a href={member.twitter} className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
+                <a href={member.twitter} target="_blank" className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
                   <FaTwitter className="w-5 h-5" />
                 </a>
-                <a href={member.github} className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200">
+                <a href={member.github} target="_blank" className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200">
                   <FaGithub className="w-5 h-5" />
                 </a>
               </div>
