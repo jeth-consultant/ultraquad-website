@@ -32,7 +32,7 @@ export default function Hero() {
                 <FaStar key={i} className="w-3 h-3 fill-current" />
               ))}
             </div>
-            <span className="text-sm text-gray-600 ml-2 font-medium">Trusted by 100+ companies</span>
+            <span className="text-sm text-gray-600 ml-2 font-medium">Trusted by  companies</span>
           </div>
         </div>
 
