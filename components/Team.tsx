@@ -6,19 +6,19 @@ import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 const teamMembers: TeamMember[] = [
   {
     name: "Vincent Kiplangat",
-    role: "CEO",
+    role: "Chief Executive Officer",
     expertise: "Generative AI Strategy & Business Digital Transformation",
     description:
-      "As our visionary CEO, Vincent guides businesses through digital transformation, leveraging AI to drive innovation and operational efficiency.",
-    image: '/services/business.png'
+      "As our visionary Chief Executive Officer, Vincent guides businesses through digital transformation, leveraging AI to drive innovation and operational efficiency.",
+    image: "/services/business.png"
   },
   {
     name: "Mark Mwangi",
-    role: "CTO",
+    role: "Chief Technology Officer",
     expertise: "Machine Learning Architecture & Advanced Data Science",
     description:
       "Mark leads technical innovation, designing and implementing sophisticated machine learning systems that are robust, scalable, and solve complex business challenges.",
-    image: '/team/mark.png'
+    image: "/team/mark.png"
   },
   {
     name: "Frank Bett",
@@ -26,7 +26,7 @@ const teamMembers: TeamMember[] = [
     expertise: "End-to-End System Development & Organizational Culture",
     description:
       "Frank combines fullstack development skills with HR management, creating solutions that are both technically excellent and human-centered.",
-    image: '/team/frank.png'
+    image: "/team/frank.png"
   },
   {
     name: "Jethro",
@@ -34,7 +34,7 @@ const teamMembers: TeamMember[] = [
     expertise: "Enterprise Systems Integration & DevOps Engineering",
     description:
       "Jethro bridges business needs and technical execution, specializing in enterprise-level systems consulting and DevOps practices for seamless deployment and productivity.",
-    image: '/team/jethro.png'
+    image: "/team/jethro.png"
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Team() {
   return (
     <section id="team" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
@@ -71,7 +71,7 @@ export default function Team() {
                   <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">
                     {member.name}
                   </h3>
-                  <p className="text-sm uppercase text-sky-700 font-semibold">
+                  <p className="text-[15px] uppercase text-sky-700 font-semibold tracking-wide">
                     {member.role}
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function Team() {
                 <a href="#" className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
                   <FaTwitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-2 text-gray-400 hover:text-gray-700 transition-all duration-200">
+                <a href="#" className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200">
                   <FaGithub className="w-5 h-5" />
                 </a>
               </div>
