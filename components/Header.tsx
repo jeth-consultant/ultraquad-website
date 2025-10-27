@@ -13,6 +13,7 @@ const navItems: NavItem[] = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,33 +24,66 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-gray-900 shadow-lg' : 'bg-transparent'
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold text-sky-600">UltraQuad</span>
-          </div>
-          
+          {/* Logo */}
+          <span className="text-2xl font-bold text-sky-400">UltraQuad</span>
+
+          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item: NavItem) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-sky-600 font-medium transition-colors duration-300"
+                className="text-gray-300 hover:text-sky-400 font-medium transition-colors duration-300 relative group"
+              >
+                {item.label}
+                <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-gray-300"
+          >
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden flex flex-col space-y-4 pb-6 text-center">
+            {navItems.map((item: NavItem) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-gray-300 hover:text-sky-400 transition font-medium"
+                onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </a>
             ))}
           </div>
-          
-          <button className="md:hidden text-gray-700">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
+        )}
       </nav>
     </header>
   );

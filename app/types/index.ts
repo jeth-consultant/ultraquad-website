@@ -8,7 +8,8 @@ export interface TeamMember {
 export interface Service {
   title: string;
   description: string;
-  icon: string;
+  // icon: string;
+  image?: string;
 }
 
 export interface NavItem {
