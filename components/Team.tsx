@@ -18,7 +18,7 @@ const teamMembers: TeamMember[] = [
     expertise: "Machine Learning Architecture & Advanced Data Science",
     description:
       "Mark leads technical innovation, designing and implementing sophisticated machine learning systems that are robust, scalable, and solve complex business challenges.",
-    image: "/team/mark.png"
+    image: "/services/business.png"
   },
   {
     name: "Frank Bett",
@@ -26,7 +26,7 @@ const teamMembers: TeamMember[] = [
     expertise: "End-to-End System Development & Organizational Culture",
     description:
       "Frank combines fullstack development skills with HR management, creating solutions that are both technically excellent and human-centered.",
-    image: "/team/frank.png"
+    image: "/services/business.png"
   },
   {
     name: "Jethro",
@@ -34,7 +34,7 @@ const teamMembers: TeamMember[] = [
     expertise: "Enterprise Systems Integration & DevOps Engineering",
     description:
       "Jethro bridges business needs and technical execution, specializing in enterprise-level systems consulting and DevOps practices for seamless deployment and productivity.",
-    image: "/team/jethro.png"
+    image: "/services/business.png"
   },
 ];
 
