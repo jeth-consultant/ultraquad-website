@@ -33,7 +33,7 @@ const services: Service[] = [
   },
   {
     title: 'Business Technology Solutions',
-    description: 'Comprehensive technology roadmaps aligned with your business objectives.',
+    description: 'Comprehensive technology roadmaps aligned with your business core objectives.',
     image: '/services/business.png'
   },
   {
