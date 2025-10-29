@@ -4,10 +4,10 @@ interface ValueItem {
 }
 
 const values: ValueItem[] = [
-  { text: 'Innovation-driven approach', icon: '💡' },
-  { text: 'Client-centric solutions', icon: '🤝' },
-  { text: 'Cutting-edge technology expertise', icon: '⚡' },
-  { text: 'Scalable and sustainable systems', icon: '📈' }
+  { text: 'Innovation-driven approach', icon: 'Lightbulb' },
+  { text: 'Client-centric solutions', icon: 'Users' },
+  { text: 'Cutting-edge technology expertise', icon: 'Zap' },
+  { text: 'Scalable and sustainable systems', icon: 'TrendingUp' }
 ];
 
 export default function About() {
@@ -71,19 +71,7 @@ export default function About() {
                 
                 <div className="text-center p-6 relative z-10">
                   <div className="w-24 h-24 bg-gradient-to-br from-sky-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-105 transition-all duration-500 group-hover:shadow-sky-200">
-                    <svg 
-                      className="w-12 h-12 text-white" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={1.5} 
-                        d="M13 10V3L4 14h7v7l9-11h-7z" 
-                      />
-                    </svg>
+                    <span className="text-white text-2xl">Rocket</span>
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-3">Digital Transformation</h4>
                   <p className="text-gray-600 leading-relaxed">
