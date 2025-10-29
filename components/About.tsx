@@ -1,13 +1,28 @@
+import { JSX } from 'react';
+import { FaLightbulb, FaUsers, FaBolt, FaChartLine, FaRocket } from 'react-icons/fa';
+
 interface ValueItem {
   text: string;
-  icon: string;
+  icon: JSX.Element;
 }
 
 const values: ValueItem[] = [
-  { text: 'Innovation-driven approach', icon: 'Lightbulb' },
-  { text: 'Client-centric solutions', icon: 'Users' },
-  { text: 'Cutting-edge technology expertise', icon: 'Zap' },
-  { text: 'Scalable and sustainable systems', icon: 'TrendingUp' }
+  { 
+    text: 'Innovation-driven approach', 
+    icon: <FaLightbulb className="w-5 h-5" />
+  },
+  { 
+    text: 'Client-centric solutions', 
+    icon: <FaUsers className="w-5 h-5" />
+  },
+  { 
+    text: 'Cutting-edge technology expertise', 
+    icon: <FaBolt className="w-5 h-5" />
+  },
+  { 
+    text: 'Scalable and sustainable systems', 
+    icon: <FaChartLine className="w-5 h-5" />
+  }
 ];
 
 export default function About() {
@@ -48,10 +63,8 @@ export default function About() {
                   key={index} 
                   className="flex items-center group hover:translate-x-2 transition-transform duration-300"
                 >
-                  <div className="w-10 h-10 bg-sky-50 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-lg group-hover:scale-110 transition-transform duration-300">
-                      {value.icon}
-                    </span>
+                  <div className="w-10 h-10 bg-sky-50 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 text-sky-600">
+                    {value.icon}
                   </div>
                   <span className="text-gray-800 text-lg font-medium">{value.text}</span>
                 </div>
@@ -71,7 +84,7 @@ export default function About() {
                 
                 <div className="text-center p-6 relative z-10">
                   <div className="w-24 h-24 bg-gradient-to-br from-sky-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-105 transition-all duration-500 group-hover:shadow-sky-200">
-                    <span className="text-white text-2xl">Rocket</span>
+                    <FaRocket className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-3">Digital Transformation</h4>
                   <p className="text-gray-600 leading-relaxed">
