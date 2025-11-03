@@ -1,55 +1,114 @@
+'use client';
+
 import { TeamMember } from "@/app/types";
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'Vinn',
-    role: 'CEO',
-    expertise: 'Generative AI and Business Transformation',
-    description: 'A visionary leader passionate about Generative AI and business transformation.'
+    name: "Vincent Kiplangat",
+    role: "Chief Executive Officer",
+    expertise: "Generative AI Strategy & Business Digital Transformation",
+    description:
+      "As our visionary Chief Executive Officer, Vincent guides businesses through digital transformation, leveraging AI to drive innovation and operational efficiency.",
+    image: "/team/vincent.JPG",
+    linkedin: "https://www.linkedin.com/in/kiplangat-vincent-824066249/",
+    twitter: "#",
+    github: "https://github.com/balvins435"
   },
   {
-    name: 'Mark Mwangi',
-    role: 'CTO',
-    expertise: 'Machine Learning and Data Science',
-    description: 'Expert in Machine Learning and Data Science. Leads innovation and research.'
+    name: "Mark Mwangi",
+    role: "Chief Technology Officer",
+    expertise: "Machine Learning Architecture & Advanced Data Science",
+    description:
+      "Mark leads technical innovation, designing and implementing sophisticated machine learning systems that are robust, scalable, and solve complex business challenges.",
+    image: "/team/mark.png",
+    linkedin: "https://www.linkedin.com/in/mark-mwangi-957591257/",
+    twitter: "#",
+    github: "https://github.com/Mwangimark"
   },
   {
-    name: 'Frankline Bett',
-    role: 'Fullstack Engineer / HR',
-    expertise: 'Fullstack Development and Team Culture',
-    description: 'Skilled in Fullstack Development and team culture management.'
+    name: "Frank Bett",
+    role: "Senior Engineer & HR Lead",
+    expertise: "End-to-End System Development & Organizational Culture",
+    description:
+      "Frank combines fullstack development skills with HR management, creating solutions that are both technically excellent and human-centered.",
+    image: "/services/business.png",
+    linkedin: "#",
+    twitter: "#",
+    github: "#"
   },
   {
-    name: 'Jethro Sumbeiywet',
-    role: 'Information Systems Consultant',
-    expertise: 'Fullstack Development and DevOps',
-    description: 'Specializes in Fullstack Development and DevOps.'
-  }
+    name: "Jethro",
+    role: "Business Analyst",
+    expertise: "Enterprise Systems Integration & DevOps Engineering",
+    description:
+      "Jethro bridges business needs and technical execution, specializing in enterprise-level systems consulting and DevOps practices for seamless deployment and productivity.",
+    image: "/services/business.png",
+    linkedin: "#",
+    twitter: "#",
+    github: "#"
+  },
 ];
 
 export default function Team() {
   return (
-    <section id="team" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="team" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Team
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+            Meet Our Team
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet the experts driving innovation and excellence
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            The brilliant minds driving innovation and delivering exceptional results
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member: TeamMember, index: number) => (
-            <div key={index} className="card p-6 text-center group hover:scale-105 transition-transform duration-300">
-              <div className="w-24 h-24 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-                {member.name.charAt(0)}
+
+        {/* Team Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 flex flex-col gap-4"
+            >
+              {/* Row 1: Image + Name & Role */}
+              <div className="flex items-center gap-4">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-24 h-24 rounded-2xl object-cover"
+                />
+                <div className="flex flex-col">
+                  <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">
+                    {member.name}
+                  </h3>
+                  <p className="text-[15px] uppercase text-sky-700 font-semibold tracking-wide">
+                    {member.role}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-              <p className="text-sky-600 font-semibold mb-3">{member.role}</p>
-              <p className="text-sm text-gray-600 mb-3 font-medium">{member.expertise}</p>
-              <p className="text-gray-500 text-sm leading-relaxed">{member.description}</p>
+
+              {/* Row 2: Expertise */}
+              <p className="text-gray-800 font-semibold">{member.expertise}</p>
+
+              {/* Row 3: Description */}
+              <p className="text-gray-600 text-[15px] leading-relaxed">
+                {member.description}
+              </p>
+
+              {/* Row 4: Social Links */}
+              <div className="flex justify-center space-x-4 p-2 bg-gray-900 border-t border-gray-200 rounded-b-xl">
+                <a href={member.linkedin} target="_blank" className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200">
+                  <FaLinkedin className="w-5 h-5" />
+                </a>
+                <a href={member.twitter} target="_blank" className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
+                  <FaTwitter className="w-5 h-5" />
+                </a>
+                <a href={member.github} target="_blank" className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200">
+                  <FaGithub className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           ))}
         </div>

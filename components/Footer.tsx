@@ -1,7 +1,38 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear: number = new Date().getFullYear();
+
+  const socialLinks = [
+    { 
+      icon: <FaTwitter className="w-5 h-5" />, 
+      name: "Twitter", 
+      href: "#" 
+    },
+    { 
+      icon: <FaLinkedin className="w-5 h-5" />, 
+      name: "LinkedIn", 
+      href: "#" 
+    },
+    { 
+      icon: <FaGithub className="w-5 h-5" />, 
+      name: "GitHub", 
+      href: "#" 
+    },
+  ];
+
+  const contactInfo = [
+    {
+      icon: <FaEnvelope className="w-4 h-4" />,
+      text: "contact@ultraquad.com",
+      href: "mailto:contact@ultraquad.com"
+    },
+    {
+      icon: <FaPhone className="w-4 h-4" />,
+      text: "+1 (555) 123-4567",
+      href: "tel:+15551234567"
+    }
+  ];
 
   return (
     <footer className="bg-gray-900 text-white py-12">
