@@ -1,89 +1,149 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaEnvelope,
+  FaPhone,
+  FaTiktok,
+} from "react-icons/fa";
 
 export default function Footer() {
   const currentYear: number = new Date().getFullYear();
 
-  const socialLinks = [
-    { 
-      icon: <FaTwitter className="w-5 h-5" />, 
-      name: "Twitter", 
-      href: "#" 
-    },
-    { 
-      icon: <FaLinkedin className="w-5 h-5" />, 
-      name: "LinkedIn", 
-      href: "#" 
-    },
-    { 
-      icon: <FaGithub className="w-5 h-5" />, 
-      name: "GitHub", 
-      href: "#" 
-    },
-  ];
-
-  const contactInfo = [
-    {
-      icon: <FaEnvelope className="w-4 h-4" />,
-      text: "contact@ultraquad.com",
-      href: "mailto:contact@ultraquad.com"
-    },
-    {
-      icon: <FaPhone className="w-4 h-4" />,
-      text: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
-    }
-  ];
-
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
-        
-        {/* Logo & About */}
+    <footer className="bg-gray-950 text-gray-300 py-14 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+        {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-sky-400">UltraQuad</h2>
-          <p className="text-gray-400 mt-3 leading-relaxed">
-            Building intelligent and scalable solutions for a digital future.
+          <h2 className="text-3xl font-extrabold text-sky-400 tracking-tight">
+            UltraQuad
+          </h2>
+          <p className="mt-4 text-gray-400 leading-relaxed">
+            Empowering innovation through AI-driven solutions, software
+            excellence, and digital transformation across Africa and beyond.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li><a href="#" className="hover:text-sky-400 transition">Services</a></li>
-            <li><a href="#" className="hover:text-sky-400 transition">Projects</a></li>
-            <li><a href="#" className="hover:text-sky-400 transition">About Us</a></li>
-            <li><a href="#" className="hover:text-sky-400 transition">Contact</a></li>
+          <h3 className="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul className="space-y-2">
+            {["Services", "Projects", "About Us", "Contact"].map((item) => (
+              <li key={item}>
+                <a
+                  href="#"
+                  className="hover:text-sky-400 transition-colors duration-200"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* Contact */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-3">Contact</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li>Email: info@ultraquad.com</li>
-            <li>Phone: +254 700 000 000</li>
-            <li>Nairobi, Kenya</li>
+          <h3 className="text-xl font-semibold text-white mb-4">Contact</h3>
+          <ul className="space-y-4">
+            <li>
+              <div className="flex items-center space-x-2">
+                <FaEnvelope className="text-sky-400 w-4 h-4" />
+                <span className="font-medium text-white">Email:</span>
+              </div>
+              <div className="mt-1 space-y-1 ml-6">
+                <a
+                  href="mailto:vinnbalvins@gmail.com"
+                  className="hover:text-sky-400 block"
+                >
+                  vinnbalvins@gmail.com
+                </a>
+                <a
+                  href="mailto:markcosmars2000@gmail.com"
+                  className="hover:text-sky-400 block"
+                >
+                  markcosmars2000@gmail.com
+                </a>
+                <a
+                  href="mailto:info@ultraquad.com"
+                  className="hover:text-sky-400 block"
+                >
+                  info@ultraquad.com
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div className="flex items-center space-x-2">
+                <FaPhone className="text-sky-400 w-4 h-4" />
+                <span className="font-medium text-white">Phone:</span>
+              </div>
+              <div className="mt-1 ml-6 space-y-1">
+                <a href="tel:+254793470022" className="hover:text-sky-400 block">
+                  +254 793 470 022
+                </a>
+                <a href="tel:+254740466295" className="hover:text-sky-400 block">
+                  +254 740 466 295
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <span className="font-medium text-white">Location:</span>
+              <p className="ml-0 mt-1">Nairobi, Kenya</p>
+            </li>
           </ul>
         </div>
 
-        {/* Socials */}
+        {/* Social Links */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-3">Follow Us</h3>
-          <div className="flex space-x-5 text-gray-400 text-2xl">
-            <a href="#" className="hover:text-sky-400 transition"><FaFacebook /></a>
-            <a href="#" className="hover:text-sky-400 transition"><FaTwitter /></a>
-            <a href="#" className="hover:text-sky-400 transition"><FaLinkedin /></a>
-            <a href="#" className="hover:text-sky-400 transition"><FaGithub /></a>
-            <a href="#" className="hover:text-sky-400 transition"><FaInstagram /></a>
+          <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
+          <div className="flex flex-wrap gap-4 text-2xl">
+            <a
+              href="#"
+              className="hover:text-sky-400 transition-colors"
+              aria-label="Facebook"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="#"
+              className="hover:text-sky-400 transition-colors"
+              aria-label="TikTok"
+            >
+              <FaTiktok />
+            </a>
+            <a
+              href="#"
+              className="hover:text-sky-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.instagram.com/ultraquad2025?igsh=b3kyMGRmZ3N4bmFp&utm_source=qr"
+              className="hover:text-sky-400 transition-colors"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="#"
+              className="hover:text-sky-400 transition-colors"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
           </div>
         </div>
-
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
-        © {currentYear} UltraQuad IT Consulting. All rights reserved.
+      <div className="mt-12 text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
+        © {currentYear} UltraQuad IT Consulting — Crafted with passion by{" "}
+        <span className="text-sky-400 font-medium">Mark Mwangi</span>, CTO &
+        Co-Founder.
       </div>
     </footer>
   );
