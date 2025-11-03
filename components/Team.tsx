@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
     expertise: "End-to-End System Development & Organizational Culture",
     description:
       "Frank combines fullstack development skills with HR management, creating solutions that are both technically excellent and human-centered.",
-    image: "/services/business.png",
+    image: "/team/frank.png",
     linkedin: "#",
     twitter: "#",
     github: "#"
