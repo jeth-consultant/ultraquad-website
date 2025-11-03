@@ -24,7 +24,7 @@ export default function Footer() {
           <img
             src="/logo.png"
             alt="UltraQuad Logo"
-            className="mt-4 h-14 w-auto drop-shadow-md"
+            className="mt-4 h-14 w-40 drop-shadow-md"
           />
 
           <p className="mt-4 text-gray-400 leading-relaxed">

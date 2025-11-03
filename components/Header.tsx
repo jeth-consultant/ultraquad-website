@@ -32,7 +32,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="UltraQuad Logo" className="h-20 w-40" />
+            <img src="/logo.png" alt="UltraQuad Logo" className="h-14 w-40" />
             {/* <span className="text-2xl font-bold text-sky-400">UltraQuad</span> */}
           </a>
 
