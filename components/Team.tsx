@@ -38,7 +38,7 @@ const teamMembers: TeamMember[] = [
     github: "#"
   },
   {
-    name: "Jethro",
+    name: "Jethro Sumbeiywet",
     role: "Business Analyst",
     expertise: "Enterprise Systems Integration & DevOps Engineering",
     description:
