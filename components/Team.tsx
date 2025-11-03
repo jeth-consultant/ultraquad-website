@@ -10,7 +10,7 @@ const teamMembers: TeamMember[] = [
     expertise: "Generative AI Strategy & Business Digital Transformation",
     description:
       "As our visionary Chief Executive Officer, Vincent guides businesses through digital transformation, leveraging AI to drive innovation and operational efficiency.",
-    image: "/team/vincent.JPG",
+    image: "/team/vinn.png",
     linkedin: "https://www.linkedin.com/in/kiplangat-vincent-824066249/",
     twitter: "#",
     github: "https://github.com/balvins435"
