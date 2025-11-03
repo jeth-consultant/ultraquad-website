@@ -23,13 +23,27 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+
+    const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfju73iznrVo5dWIBCezZb1vpbI7OukWz2viPx59sfDIuhytA/formResponse";
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("entry.67668707", formData.name);       
+    formDataToSend.append("entry.185178097", formData.email);    
+    formDataToSend.append("entry.1557358080", formData.message);  
+
+    await fetch(formUrl, {
+      method: "POST",
+      mode: "no-cors",
+      body: formDataToSend,
+    });
+
+    alert("✅ Message sent! We'll get back to you soon.");
+    setFormData({ name: "", email: "", message: "" });
   };
+
+
 
   return (
     <section id="contact" className="section-padding bg-gray-50">
@@ -42,7 +56,7 @@ export default function Contact() {
             Ready to transform your business? Let's discuss your project.
           </p>
         </div>
-        
+
         <div className="card p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -60,7 +74,7 @@ export default function Contact() {
                 placeholder="Your name"
               />
             </div>
-            
+
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email
@@ -76,7 +90,7 @@ export default function Contact() {
                 placeholder="your.email@example.com"
               />
             </div>
-            
+
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                 Message
@@ -92,7 +106,7 @@ export default function Contact() {
                 placeholder="Tell us about your project..."
               />
             </div>
-            
+
             <button
               type="submit"
               className="w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-3 rounded-2xl transition-colors duration-300"
@@ -105,3 +119,4 @@ export default function Contact() {
     </section>
   );
 }
+
