@@ -1,6 +1,5 @@
 import {
   FaFacebook,
-  FaTwitter,
   FaLinkedin,
   FaGithub,
   FaInstagram,
@@ -16,10 +15,18 @@ export default function Footer() {
     <footer className="bg-gray-950 text-gray-300 py-14 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand */}
-        <div>
+        <div className="flex flex-col items-start">
           <h2 className="text-3xl font-extrabold text-sky-400 tracking-tight">
             UltraQuad
           </h2>
+
+          {/* Logo below title */}
+          <img
+            src="/logo.png"
+            alt="UltraQuad Logo"
+            className="mt-4 h-14 w-auto drop-shadow-md"
+          />
+
           <p className="mt-4 text-gray-400 leading-relaxed">
             Empowering innovation through AI-driven solutions, software
             excellence, and digital transformation across Africa and beyond.
@@ -47,6 +54,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">Contact</h3>
           <ul className="space-y-4">
+            {/* Email */}
             <li>
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="text-sky-400 w-4 h-4" />
@@ -74,6 +82,7 @@ export default function Footer() {
               </div>
             </li>
 
+            {/* Phone */}
             <li>
               <div className="flex items-center space-x-2">
                 <FaPhone className="text-sky-400 w-4 h-4" />
@@ -89,6 +98,7 @@ export default function Footer() {
               </div>
             </li>
 
+            {/* Location */}
             <li>
               <span className="font-medium text-white">Location:</span>
               <p className="ml-0 mt-1">Nairobi, Kenya</p>
