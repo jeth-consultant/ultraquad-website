@@ -5,7 +5,7 @@ import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Vincent Kiplangat",
+    name: "Kiplangat Vincent",
     role: "Chief Executive Officer",
     expertise: "Generative AI Strategy & Business Digital Transformation",
     description:
@@ -16,7 +16,7 @@ const teamMembers: TeamMember[] = [
     github: "https://github.com/balvins435"
   },
   {
-    name: "Mark Mwangi",
+    name: "Mwangi Mark",
     role: "Chief Technology Officer",
     expertise: "Machine Learning Architecture & Advanced Data Science",
     description:
@@ -27,7 +27,7 @@ const teamMembers: TeamMember[] = [
     github: "https://github.com/Mwangimark"
   },
   {
-    name: "Frank Bett",
+    name: "Bett Franklin",
     role: "Senior Engineer & HR Lead",
     expertise: "End-to-End System Development & Organizational Culture",
     description:
@@ -38,7 +38,7 @@ const teamMembers: TeamMember[] = [
     github: "#"
   },
   {
-    name: "Jethro",
+    name: "Sumbeiywet Jethro",
     role: "Business Analyst",
     expertise: "Enterprise Systems Integration & DevOps Engineering",
     description:
