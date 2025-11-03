@@ -29,9 +29,9 @@ export default function Contact() {
     const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfju73iznrVo5dWIBCezZb1vpbI7OukWz2viPx59sfDIuhytA/formResponse";
 
     const formDataToSend = new FormData();
-    formDataToSend.append("entry.67668707", formData.name);       // Name (typed by user)
-    formDataToSend.append("entry.185178097", formData.email);     // Email (typed by user)
-    formDataToSend.append("entry.1557358080", formData.message);  // Message (typed by user)
+    formDataToSend.append("entry.67668707", formData.name);       
+    formDataToSend.append("entry.185178097", formData.email);    
+    formDataToSend.append("entry.1557358080", formData.message);  
 
     await fetch(formUrl, {
       method: "POST",
