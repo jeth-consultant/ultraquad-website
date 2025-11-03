@@ -3,6 +3,11 @@ export interface TeamMember {
   role: string;
   expertise: string;
   description: string;
+  image?: string;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
+
 }
 
 export interface Service {
