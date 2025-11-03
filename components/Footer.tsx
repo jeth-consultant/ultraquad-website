@@ -108,7 +108,7 @@ export default function Footer() {
               <FaFacebook />
             </a>
             <a
-              href="#"
+              href="https://www.tiktok.com/@greatmindstech?_r=1&_t=ZM-915bGFlnUy3"
               className="hover:text-sky-400 transition-colors"
               aria-label="TikTok"
             >
