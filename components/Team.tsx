@@ -14,7 +14,7 @@ const teamMembers: TeamMember[] = [
     description: 'Expert in Machine Learning and Data Science. Leads innovation and research.'
   },
   {
-    name: 'Frank',
+    name: 'Frankline Bett',
     role: 'Fullstack Engineer / HR',
     expertise: 'Fullstack Development and Team Culture',
     description: 'Skilled in Fullstack Development and team culture management.'
