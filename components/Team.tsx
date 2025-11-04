@@ -43,10 +43,10 @@ const teamMembers: TeamMember[] = [
     expertise: "Enterprise Systems Integration & DevOps Engineering",
     description:
       "Jethro bridges business needs and technical execution, specializing in enterprise-level systems consulting and DevOps practices for seamless deployment and productivity.",
-    image: "/services/business.png",
-    linkedin: "#",
+    image: "/team/jeth.png",
+    linkedin: "https://www.linkedin.com/in/jethro-cheruiyot-18a5b8380/",
     twitter: "#",
-    github: "#"
+    github: "https://github.com/jeth-consultant"
   },
 ];
 
