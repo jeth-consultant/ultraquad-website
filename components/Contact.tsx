@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent } from "react";
 
 interface FormData {
   name: string;
@@ -10,28 +10,31 @@ interface FormData {
 
 export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfju73iznrVo5dWIBCezZb1vpbI7OukWz2viPx59sfDIuhytA/formResponse";
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfju73iznrVo5dWIBCezZb1vpbI7OukWz2viPx59sfDIuhytA/formResponse";
 
     const formDataToSend = new FormData();
-    formDataToSend.append("entry.67668707", formData.name);       
-    formDataToSend.append("entry.185178097", formData.email);    
-    formDataToSend.append("entry.1557358080", formData.message);  
+    formDataToSend.append("entry.67668707", formData.name);
+    formDataToSend.append("entry.185178097", formData.email);
+    formDataToSend.append("entry.1557358080", formData.message);
 
     await fetch(formUrl, {
       method: "POST",
@@ -43,8 +46,6 @@ export default function Contact() {
     setFormData({ name: "", email: "", message: "" });
   };
 
-
-
   return (
     <section id="contact" className="section-padding bg-gray-50">
       <div className="max-w-4xl mx-auto">
@@ -52,7 +53,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl setext-gray-600 max-w-2xl mx-auto">
             Ready to transform your business? Let's discuss your project.
           </p>
         </div>
@@ -60,7 +61,10 @@ export default function Contact() {
         <div className="card p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Name
               </label>
               <input
@@ -76,7 +80,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email
               </label>
               <input
@@ -92,7 +99,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Message
               </label>
               <textarea
@@ -109,7 +119,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-3 rounded-2xl transition-colors duration-300"
+              className="px-8 w-full py-3 rounded-full bg-sky-500 hover:bg-sky-600 text-white shadow-lg hover:shadow-sky-500/30 transition-all duration-300 font-semibold"
             >
               Send Message
             </button>
@@ -119,4 +129,3 @@ export default function Contact() {
     </section>
   );
 }
-

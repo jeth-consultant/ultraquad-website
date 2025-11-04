@@ -20,12 +20,14 @@ export default function Footer() {
             UltraQuad
           </h2>
 
-          {/* Logo below title */}
-          <img
-            src="/logo.png"
-            alt="UltraQuad Logo"
-            className="mt-4 h-14 w-40 drop-shadow-md"
-          />
+          {/* Logo */}
+          <a href="#home" className="flex items-center space-x-3">
+            <img
+              src="/logo.png"
+              alt="UltraQuad Logo"
+              className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
+            />
+          </a>
 
           <p className="mt-4 text-gray-400 leading-relaxed">
             Empowering innovation through AI-driven solutions, software
@@ -74,6 +76,12 @@ export default function Footer() {
                   markcosmars2000@gmail.com
                 </a>
                 <a
+                  href="mailto:sumbeiywetjethro@gmail.com"
+                  className="hover:text-sky-400 block"
+                >
+                  sumbeiywetjethro@gmail.com{" "}
+                </a>
+                <a
                   href="mailto:info@ultraquad.com"
                   className="hover:text-sky-400 block"
                 >
@@ -89,10 +97,16 @@ export default function Footer() {
                 <span className="font-medium text-white">Phone:</span>
               </div>
               <div className="mt-1 ml-6 space-y-1">
-                <a href="tel:+254793470022" className="hover:text-sky-400 block">
+                <a
+                  href="tel:+254793470022"
+                  className="hover:text-sky-400 block"
+                >
                   +254 793 470 022
                 </a>
-                <a href="tel:+254740466295" className="hover:text-sky-400 block">
+                <a
+                  href="tel:+254740466295"
+                  className="hover:text-sky-400 block"
+                >
                   +254 740 466 295
                 </a>
               </div>

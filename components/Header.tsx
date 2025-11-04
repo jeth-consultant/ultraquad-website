@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { NavItem } from '@/app/types';
-import { useState, useEffect } from 'react';
+import { NavItem } from "@/app/types";
+import { useState, useEffect } from "react";
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Team', href: '#team' },
-  { label: 'Contact', href: '#contact' }
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Team", href: "#team" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
@@ -19,26 +19,26 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-gray-900 shadow-lg'
-          : 'bg-gray-900/40 backdrop-blur-md'
-        }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-gray-900 shadow-lg" : "bg-gray-900/40 backdrop-blur-md"
+      }`}
     >
-
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="UltraQuad Logo" className="h-14 w-40" />
-            {/* <span className="text-2xl font-bold text-sky-400">UltraQuad</span> */}
+          <a href="#home" className="flex items-center space-x-3">
+            <img
+              src="/logo.png"
+              alt="UltraQuad Logo"
+              className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
+            />
           </a>
-
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
@@ -69,7 +69,7 @@ export default function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
               />
             </svg>
           </button>
