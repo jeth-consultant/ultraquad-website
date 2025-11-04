@@ -33,9 +33,9 @@ const teamMembers: TeamMember[] = [
     description:
       "Frank combines fullstack development skills with HR management, creating solutions that are both technically excellent and human-centered.",
     image: "/team/frank.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/franklinebett",
     twitter: "#",
-    github: "#"
+    github: "https://github.com/Frank5959"
   },
   {
     name: "Sumbeiywet Jethro",
