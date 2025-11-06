@@ -1,9 +1,8 @@
-import Footer from "@/components/footer/footer";
 import { FaPhone, FaEnvelope, FaLandmark } from "react-icons/fa";
 
 export default function ContactUsPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-white text-gray-800 pt-24">
       {/* Header section */}
       <div className="bg-black bg-opacity-80 text-white py-16 text-center">
         <h1 className="text-5xl font-serif">Contact us</h1>
@@ -100,8 +99,6 @@ export default function ContactUsPage() {
           </ul>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
