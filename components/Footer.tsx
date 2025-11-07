@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-3">
             <img
-              src="/logo.png"
+              src="/logo-Photoroom.png"
               alt="UltraQuad Logo"
               className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
             />
