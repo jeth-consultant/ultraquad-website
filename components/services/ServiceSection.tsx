@@ -20,7 +20,7 @@ const ServicesSection: NextPage = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100"
+              className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-sky-100"
             >
               <div className="relative h-48 w-full mb-6 overflow-hidden rounded-md">
                 <Image
@@ -42,7 +42,7 @@ const ServicesSection: NextPage = () => {
               <p className="text-gray-600 mb-4">{service.description}</p>
               <Link
                 href={service.href}
-                className="inline-flex items-center text-blue-300 hover:text-blue-400 font-medium transition-colors"
+                className="inline-flex items-center text-sky-400 hover:text-sky-500 font-medium transition-colors"
                 aria-label={`Learn more about ${service.name}`}
               >
                 Learn more
@@ -67,7 +67,7 @@ const ServicesSection: NextPage = () => {
         <div className="mt-16 text-center">
           <Link
             href="/services"
-            className="px-8 py-3 bg-blue-300 text-white font-medium rounded-md hover:bg-blue-400 inline-flex items-center transition-colors"
+            className="px-8 py-3 bg-sky-500 text-white font-medium rounded-md hover:bg-sky-600 inline-flex items-center transition-colors"
           >
             View All Services
             <svg

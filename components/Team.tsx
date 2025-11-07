@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { TeamMember } from "@/app/types";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
@@ -13,7 +13,7 @@ const teamMembers: TeamMember[] = [
     image: "/team/vinn.png",
     linkedin: "https://www.linkedin.com/in/kiplangat-vincent-824066249/",
     twitter: "#",
-    github: "https://github.com/balvins435"
+    github: "https://github.com/balvins435",
   },
   {
     name: "Mwangi Mark",
@@ -24,29 +24,29 @@ const teamMembers: TeamMember[] = [
     image: "/team/mark.png",
     linkedin: "https://www.linkedin.com/in/mark-mwangi-957591257/",
     twitter: "#",
-    github: "https://github.com/Mwangimark"
+    github: "https://github.com/Mwangimark",
   },
   {
     name: "Bett Franklin",
-    role: "Senior Engineer & HR Lead",
+    role: "Chief Operating Officer",
     expertise: "End-to-End System Development & Organizational Culture",
     description:
-      "Frank combines fullstack development skills with HR management, creating solutions that are both technically excellent and human-centered.",
+      "A full-stack developer and people-oriented leader, Franklin drives UltraQuad’s operational excellence ensuring that every solution is both technologically sound and human-centered.",
     image: "/team/frank.png",
     linkedin: "https://www.linkedin.com/in/franklinebett",
     twitter: "#",
-    github: "https://github.com/Frank5959"
+    github: "https://github.com/Frank5959",
   },
   {
     name: "Sumbeiywet Jethro",
-    role: "Business Analyst",
+    role: "Chief Financial Officer/Business analyist",
     expertise: "Enterprise Systems Integration & DevOps Engineering",
     description:
       "Jethro bridges business needs and technical execution, specializing in enterprise-level systems consulting and DevOps practices for seamless deployment and productivity.",
     image: "/team/jeth.png",
     linkedin: "https://www.linkedin.com/in/jethro-cheruiyot-18a5b8380/",
     twitter: "#",
-    github: "https://github.com/jeth-consultant"
+    github: "https://github.com/jeth-consultant",
   },
 ];
 
@@ -54,14 +54,14 @@ export default function Team() {
   return (
     <section id="team" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
             Meet Our Team
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            The brilliant minds driving innovation and delivering exceptional results
+            The brilliant minds driving innovation and delivering exceptional
+            results
           </p>
         </div>
 
@@ -99,13 +99,25 @@ export default function Team() {
 
               {/* Row 4: Social Links */}
               <div className="flex justify-center space-x-4 p-2 bg-gray-900 border-t border-gray-200 rounded-b-xl">
-                <a href={member.linkedin} target="_blank" className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  className="p-2 text-gray-400 hover:text-sky-600 transition-all duration-200"
+                >
                   <FaLinkedin className="w-5 h-5" />
                 </a>
-                <a href={member.twitter} target="_blank" className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200">
+                <a
+                  href={member.twitter}
+                  target="_blank"
+                  className="p-2 text-gray-400 hover:text-sky-500 transition-all duration-200"
+                >
                   <FaTwitter className="w-5 h-5" />
                 </a>
-                <a href={member.github} target="_blank" className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200">
+                <a
+                  href={member.github}
+                  target="_blank"
+                  className="p-2 text-gray-400 hover:text-gray-300 transition-all duration-200"
+                >
                   <FaGithub className="w-5 h-5" />
                 </a>
               </div>

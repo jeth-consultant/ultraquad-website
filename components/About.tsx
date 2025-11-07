@@ -75,15 +75,15 @@ export default function About() {
           {/* Right Column: Visual Card */}
           <div className="flex justify-center lg:justify-end">
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 max-w-md w-full group">
-              <div className="aspect-square bg-gradient-to-br from-sky-50 via-white to-blue-50 rounded-2xl flex items-center justify-center border border-gray-100 relative overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-sky-50 via-white to-sky-50 rounded-2xl flex items-center justify-center border border-gray-100 relative overflow-hidden">
                 {/* Subtle background pattern */}
                 <div className="absolute inset-0 opacity-5">
                   <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-sky-400 rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-blue-400 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-sky-500 rounded-full blur-3xl"></div>
                 </div>
                 
                 <div className="text-center p-6 relative z-10">
-                  <div className="w-24 h-24 bg-gradient-to-br from-sky-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-105 transition-all duration-500 group-hover:shadow-sky-200">
+                  <div className="w-24 h-24 bg-gradient-to-br from-sky-400 to-sky-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-105 transition-all duration-500 group-hover:shadow-sky-200">
                     <FaRocket className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-3">Digital Transformation</h4>

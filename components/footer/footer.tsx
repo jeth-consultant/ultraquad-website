@@ -27,7 +27,7 @@ const iconMap = {
 
 const Footer = () => {
   return (
-    <footer className="relative bg-grey from-blue-50 via-white to-blue-100 pt-20 pb-10 overflow-hidden border-t border-gray-200 shadow-inner">
+    <footer className="relative bg-grey from-sky-50 via-white to-sky-100 pt-20 pb-10 overflow-hidden border-t border-gray-200 shadow-inner">
       {/* Overlay Effect (optional if using background image) */}
       <div className="absolute inset-0 bg-white/80 backdrop-blur-sm pointer-events-none" />
 
@@ -57,7 +57,7 @@ const Footer = () => {
                     .map((icon, i) => (
                       <p
                         key={i}
-                        className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors"
+                        className="flex items-center gap-2 text-gray-700 hover:text-sky-600 transition-colors"
                       >
                         {iconMap[icon.type as keyof typeof iconMap]} {icon.value}
                       </p>
@@ -70,7 +70,7 @@ const Footer = () => {
                       .map((icon, i) => (
                         <span
                           key={i}
-                          className="hover:text-blue-500 transition-transform transform hover:scale-110"
+                          className="hover:text-sky-500 transition-transform transform hover:scale-110"
                         >
                           {iconMap[icon.value as keyof typeof iconMap]}
                         </span>
