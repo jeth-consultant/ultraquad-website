@@ -7,10 +7,10 @@ import { usePathname } from "next/navigation";
 
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/About" },
+  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Team", href: "#team" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
