@@ -39,7 +39,7 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="UltraQuad Logo"
-              className="h-20 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
+              className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
             />
           </Link>
 
