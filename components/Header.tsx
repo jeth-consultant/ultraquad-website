@@ -35,13 +35,13 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <a href="#home" className="flex items-center space-x-3">
             <img
               src="/logo-Photoroom.png"
               alt="UltraQuad Logo"
               className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
             />
-          </Link>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
