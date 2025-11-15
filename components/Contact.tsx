@@ -116,13 +116,12 @@ export default function Contact() {
                 placeholder="Tell us about your project..."
               />
             </div>
-
-            <button
-              type="submit"
-              className="px-8 w-full py-3 rounded-full bg-sky-500 hover:bg-sky-600 text-white shadow-lg hover:shadow-sky-500/30 transition-all duration-300 font-semibold"
+            <a
+              href="#"
+              className="px-8 py-3 rounded-full bg-sky-500 hover:bg-sky-600 shadow-lg hover:shadow-sky-500/30 transition-all duration-300 font-semibold"
             >
-              Send Message
-            </button>
+              Send
+            </a>
           </form>
         </div>
       </div>
