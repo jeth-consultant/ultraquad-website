@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           name="google-site-verification"
           content="LyjzR2V-4NCRTTiafLgeg-6kYYlQFUAoPuVEZfEzeZM"
         />
-        <meta name="keyword" content="ultraquad,IT consulting in kenya, Cybersecurity solutions,AI Consulting,Fullstack Services" />
+        <meta name="keyword" content="ultraquad consultancy,IT consulting in kenya, Cybersecurity solutions,AI Consulting,Fullstack Services" />
         
       </head>
       <Header/>
