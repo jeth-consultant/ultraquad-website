@@ -14,10 +14,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
+        <title>UltraQuad IT Consulting</title>
+        <meta
+          name="description"
+          content="Building Intelligent Solutions for the Future"
+        />
         <meta
           name="google-site-verification"
           content="LyjzR2V-4NCRTTiafLgeg-6kYYlQFUAoPuVEZfEzeZM"
         />
+        <meta name="keyword" content="ultraquad,IT consulting in kenya, Cybersecurity solutions,AI Consulting,Fullstack Services" />
+        
       </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
