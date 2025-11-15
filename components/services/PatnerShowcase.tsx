@@ -18,8 +18,8 @@ const PartnersShowcase = () => {
     <section className="relative bg-gray-50 py-24 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,11 +30,11 @@ const PartnersShowcase = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-block mb-4 px-4 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full">
+          <span className="inline-block mb-4 px-4 py-1 text-sm font-semibold text-sky-600 bg-sky-100 rounded-full">
             Trusted Worldwide
           </span>
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-            Our <span className="text-blue-300">Valued Partners</span>
+            Our <span className="text-sky-400">Valued Partners</span>
           </h2>
           <p className="mt-5 text-xl text-gray-600 max-w-3xl mx-auto">
             Collaborating with industry leaders across the globe
@@ -45,7 +45,7 @@ const PartnersShowcase = () => {
           {Object.entries(partnersByRegion).map(([region, regionalPartners]) => (
             <div key={region} className="space-y-8">
               <div className="flex items-center">
-                <div className="w-12 h-0.5 bg-blue-300 mr-4"></div>
+                <div className="w-12 h-0.5 bg-sky-400 mr-4"></div>
                 <h3 className="text-2xl font-semibold text-gray-800">{region}</h3>
               </div>
               
@@ -58,7 +58,7 @@ const PartnersShowcase = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
-                    className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-blue-300 transition-all duration-300"
+                    className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-sky-400 transition-all duration-300"
                   >
                     <div className="flex items-start space-x-4 mb-5">
                       <div className="relative h-14 w-14 flex-shrink-0 rounded-lg border border-gray-200 overflow-hidden">
@@ -72,9 +72,9 @@ const PartnersShowcase = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-gray-900">{partner.name}</h3>
-                        <p className="text-blue-300 font-medium text-sm">{partner.role}</p>
+                        <p className="text-sky-400 font-medium text-sm">{partner.role}</p>
                         <div className="mt-1 flex items-center text-xs text-gray-500">
-                          <svg className="w-3 h-3 mr-1 text-blue-300" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-3 h-3 mr-1 text-sky-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                           </svg>
                           {partner.location}
@@ -85,7 +85,7 @@ const PartnersShowcase = () => {
                     <div className="flex justify-end">
                       <Link
                         href={partner.caseStudy}
-                        className="inline-flex items-center text-sm text-blue-300 hover:text-blue-400 font-medium transition-colors"
+                        className="inline-flex items-center text-sm text-sky-400 hover:text-sky-500 font-medium transition-colors"
                       >
                         View case study
                         <svg
@@ -119,7 +119,7 @@ const PartnersShowcase = () => {
         >
           <Link
             href="/case-studies"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-300 hover:bg-blue-400 transition-colors duration-300"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sky-500 hover:bg-sky-600 transition-colors duration-300"
           >
             Explore all partnerships
             <svg

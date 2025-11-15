@@ -1,5 +1,7 @@
-import "./globals.css";
-import { ReactNode } from "react";
+import './globals.css'
+import { ReactNode } from 'react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -13,13 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="LyjzR2V-4NCRTTiafLgeg-6kYYlQFUAoPuVEZfEzeZM"
-        />
-      </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
